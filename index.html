@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="FORSHA 7 — Rise Together. Bali Crystal College.">
+<title>FORSHA 7 — Rise Together</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071a31;--navy2:#041020;--gold:#d4af37;--gold2:#efd975;--white:#f8f8f4;--muted:#aeb9c8;--line:rgba(255,255,255,.11);--card:rgba(255,255,255,.035);--ease:cubic-bezier(.22,.7,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{color:var(--white);background:radial-gradient(circle at 78% 13%,rgba(212,175,55,.10),transparent 25%),radial-gradient(circle at 12% 70%,rgba(34,77,123,.20),transparent 26%),var(--navy2);font-family:Inter,system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}::selection{background:rgba(212,175,55,.25)}
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(7,26,49,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}
+.brand{display:flex;align-items:center;gap:12px}.brand-box{width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);font:19px "Playfair Display",serif}.brand-copy{display:grid;line-height:1.05}.brand-copy strong{font-size:12px;letter-spacing:.08em}.brand-copy small{margin-top:5px;color:var(--muted);font-size:8px;letter-spacing:.18em}
+.nav-links{display:flex;gap:26px}.nav-links a{position:relative;padding:5px 0;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}.nav-links a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.3s var(--ease)}.nav-links a:hover,.nav-links a.active{color:var(--white)}.nav-links a:hover:after,.nav-links a.active:after{width:100%}
+main{width:min(1180px,86vw);margin:auto}section{scroll-margin-top:90px}.section{padding:115px 0;border-top:1px solid var(--line)}
+.eyebrow,.kicker{margin:0 0 18px;color:var(--gold2);text-transform:uppercase;letter-spacing:.24em;font-size:10px;font-weight:700}
+h1,h2,h3,blockquote{font-family:"Playfair Display",Georgia,serif;font-weight:700}h1{font-size:clamp(60px,12vw,150px);line-height:.88;letter-spacing:-.045em}h2{font-size:clamp(44px,7vw,84px);line-height:.98;letter-spacing:-.03em}h1 span,h2 em,.tagline span{color:var(--gold);font-style:normal}
+.loader{position:fixed;inset:0;z-index:999;display:grid;place-items:center;background:var(--navy2);transition:.7s var(--ease)}.loader.done{opacity:0;visibility:hidden;pointer-events:none}.loader-mark{font:48px "Playfair Display",serif;color:var(--gold);text-align:center}.loader-line{width:120px;height:1px;background:rgba(255,255,255,.12);margin:16px auto;overflow:hidden}.loader-line span{display:block;width:0;height:100%;background:var(--gold);animation:load .9s var(--ease) forwards}@keyframes load{to{width:100%}}
+.hero{position:relative;min-height:100vh;display:grid;align-items:center;padding-top:110px;overflow:hidden}.hero-content{position:relative;z-index:2;max-width:800px}.hero h1{opacity:0;transform:translateY(25px);animation:up 1s .45s var(--ease) forwards}.hero p.lede{max-width:650px;margin-top:30px;color:var(--muted);font-size:clamp(16px,2vw,20px);opacity:0;transform:translateY(18px);animation:up .9s .7s var(--ease) forwards}.hero p.lede strong{color:var(--white)}.actions{display:flex;gap:24px;align-items:center;margin-top:34px;opacity:0;transform:translateY(18px);animation:up .9s .9s var(--ease) forwards}@keyframes up{to{opacity:1;transform:none}}
+.btn{display:inline-flex;gap:16px;align-items:center;padding:13px 18px;background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:.25s var(--ease)}.btn:hover{box-shadow:0 12px 30px rgba(0,0,0,.25)}.text-link{color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase}.text-link span{color:var(--gold);margin-left:6px}.text-link:hover{color:var(--white)}
+.hero7{position:absolute;right:-2vw;bottom:-8vw;font:clamp(260px,48vw,620px) "Playfair Display",serif;line-height:.7;color:rgba(255,255,255,.035);pointer-events:none;user-select:none;will-change:transform}.grid{position:absolute;inset:17% 0 0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 75%)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:8vw}.copy{max-width:600px;color:var(--muted);font-size:16px}.copy p+p{margin-top:22px}
+.manifesto{display:grid;grid-template-columns:.5fr 1.5fr;gap:50px;align-items:end}.m7{font:clamp(110px,18vw,240px) "Playfair Display",serif;line-height:.75;color:rgba(255,255,255,.045)}blockquote{font-size:clamp(38px,6vw,74px);line-height:1.06;letter-spacing:-.02em}blockquote span{color:var(--gold)}
+.pagehero{min-height:70vh;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end;padding-top:150px}.aside{border-left:1px solid var(--gold);padding-left:22px;color:var(--muted)}.aside strong{display:block;margin-bottom:8px;color:var(--white);font-size:12px;letter-spacing:.14em}
+.acronym{border-top:1px solid var(--line)}.acro{width:100%;display:grid;grid-template-columns:80px 1fr 30px;gap:18px;align-items:center;padding:21px 0;border:0;border-bottom:1px solid var(--line);background:transparent;text-align:left;cursor:pointer;transition:.3s var(--ease)}.acro:hover,.acro.active{padding-left:14px;padding-right:14px;background:rgba(212,175,55,.04)}.letter{font:40px "Playfair Display",serif;color:var(--gold)}.acro strong{display:block;font-size:16px}.acro small{color:var(--muted)}.arrow{color:var(--gold);opacity:0;transform:translate(-5px,5px);transition:.3s var(--ease)}.acro:hover .arrow,.acro.active .arrow{opacity:1;transform:none}
+.detail{margin-top:30px;display:grid;grid-template-columns:100px 1fr;gap:26px;align-items:center;padding:28px;border:1px solid var(--line);background:var(--card);transition:opacity .2s}.detail .big{font:78px "Playfair Display",serif;color:var(--gold);line-height:1}.detail h3{font-size:34px;margin:2px 0 5px}.detail p:last-child{margin:0;color:var(--muted)}
+.values{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.value{min-height:220px;padding:22px;border:1px solid var(--line);background:var(--card);transition:.3s var(--ease)}.value:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.45)}.value span{color:var(--gold);font-size:10px;letter-spacing:.16em}.value h3{margin-top:55px;font-size:22px}.value p{color:var(--muted);font-size:13px}
+.tagline{text-align:center;padding:140px 0 160px}.tagline p{color:var(--muted);text-transform:uppercase;letter-spacing:.25em;font-size:10px}.tagline h2{margin-top:12px;font-size:clamp(56px,10vw,120px)}
+.people{border-top:1px solid var(--line)}.person{display:grid;grid-template-columns:55px 1fr 55px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);transition:.3s var(--ease)}.person:hover{padding-left:14px;padding-right:14px;background:rgba(212,175,55,.04)}.idx,.num,.member-idx{color:var(--gold);font-size:10px;letter-spacing:.14em}.num{text-align:right;opacity:.4}.person h3{font-size:clamp(22px,3vw,32px);line-height:1.12}.role{margin-top:5px;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.16em}
+.members{display:grid;grid-template-columns:1fr 1fr;gap:0 50px;border-top:1px solid var(--line)}.member{min-height:72px;display:grid;grid-template-columns:42px 1fr auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);transition:.3s var(--ease)}.member:hover{padding-left:10px;transform:translateX(4px)}.member strong{font-size:14px}.status{color:var(--muted);font-size:8px;letter-spacing:.13em;text-transform:uppercase}
+footer{display:flex;justify-content:space-between;gap:20px;padding:28px 7vw 36px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}footer strong{color:var(--white);letter-spacing:.08em}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s var(--ease)}.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.001ms!important;transition-duration:.001ms!important}.reveal{opacity:1;transform:none}}
+@media(max-width:900px){nav{padding:16px 5vw}.nav-links{gap:15px}main{width:88vw}.section{padding:90px 0}.split,.manifesto,.pagehero{grid-template-columns:1fr;gap:35px}.pagehero{min-height:auto;padding-top:145px}.values{grid-template-columns:repeat(2,1fr)}.members{grid-template-columns:1fr}}
+@media(max-width:600px){.brand-copy small{display:none}.nav-links{gap:10px}.nav-links a{font-size:8px}.hero{min-height:88vh}.hero7{right:-11vw}.actions{flex-wrap:wrap}.acro{grid-template-columns:55px 1fr 25px}.detail{grid-template-columns:1fr}.values{grid-template-columns:1fr}.person{grid-template-columns:38px 1fr}.num{display:none}.member{grid-template-columns:36px 1fr}.status{grid-column:2;margin-top:-12px}footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="loader" id="loader" aria-hidden="true"><div><div class="loader-mark">07</div><div class="loader-line"><span></span></div></div></div>
+
+<nav class="site-nav">
+  <a class="brand" href="#home" aria-label="FORSHA 7 Home"><span class="brand-box">7</span><span class="brand-copy"><strong>FORSHA 7</strong><small>BALI CRYSTAL COLLEGE</small></span></a>
+  <div class="nav-links">
+    <a href="#home" class="nav active" data-target="home">Home</a>
+    <a href="#about" class="nav" data-target="about">About</a>
+    <a href="#members" class="nav" data-target="members">Members</a>
+  </div>
+</nav>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">Bali Crystal College · Class Identity</p>
+    <h1>FORSHA <span>7</span></h1>
+    <p class="lede">One class. Two disciplines. One direction. <strong>Rise Together.</strong></p>
+    <div class="actions"><a class="btn magnetic" href="#about">Discover FORSHA <span>→</span></a><a class="text-link" href="#members">Meet the class <span>↗</span></a></div>
+  </div>
+  <div class="hero7" id="hero7" aria-hidden="true">7</div><div class="grid" aria-hidden="true"></div>
+</section>
+
+<section class="section reveal"><div class="split"><div><p class="kicker">01 — Identity</p><h2>More than<br><em>just a class.</em></h2></div><div class="copy"><p>FORSHA 7 is a shared identity built around respect, solidarity, discipline, and achievement. Front Office and Housekeeping come together as one team with one direction.</p><p>This space keeps that identity simple: words, structure, movement, and a quiet confidence.</p></div></div></section>
+
+<section class="section reveal"><div class="manifesto"><div class="m7">07</div><div><p class="kicker">02 — Manifesto</p><blockquote>“We do not rise alone.<br><span>We rise together.</span>”</blockquote></div></div></section>
+
+<section id="about" class="pagehero"><div><p class="eyebrow">03 — About</p><h1>Built with<br><span>purpose.</span></h1></div><div class="aside"><strong>FORSHA 7</strong><p>Front Office · One · Respect · Solidarity · Housekeeping · Achievement</p></div></section>
+
+<section class="section reveal">
+  <div class="section-head"><p class="kicker">04 — The Name</p><h2>FORSHA,<br><em>defined.</em></h2></div>
+  <div class="acronym">
+    <button class="acro active" data-letter="F" data-title="Front Office" data-description="The first impression of hospitality: presence, communication, and confidence."><span class="letter">F</span><span><strong>Front Office</strong><small>The first impression.</small></span><span class="arrow">↗</span></button>
+    <button class="acro" data-letter="O" data-title="One" data-description="Different roles, one shared identity, one team moving in one direction."><span class="letter">O</span><span><strong>One</strong><small>One class. One team.</small></span><span class="arrow">↗</span></button>
+    <button class="acro" data-letter="R" data-title="Respect" data-description="Respect for people, work, standards, and the effort behind every result."><span class="letter">R</span><span><strong>Respect</strong><small>How we work with others.</small></span><span class="arrow">↗</span></button>
+    <button class="acro" data-letter="S" data-title="Solidarity" data-description="We support one another through pressure, mistakes, progress, and achievement."><span class="letter">S</span><span><strong>Solidarity</strong><small>We move together.</small></span><span class="arrow">↗</span></button>
+    <button class="acro" data-letter="H" data-title="Housekeeping" data-description="Discipline, precision, cleanliness, and the details guests feel even when they never notice them."><span class="letter">H</span><span><strong>Housekeeping</strong><small>The discipline behind comfort.</small></span><span class="arrow">↗</span></button>
+    <button class="acro" data-letter="A" data-title="Achievement" data-description="We keep learning, improving, and turning consistency into results."><span class="letter">A</span><span><strong>Achievement</strong><small>Progress made visible.</small></span><span class="arrow">↗</span></button>
+  </div>
+  <div class="detail" id="detail"><div class="big" id="dLetter">F</div><div><p class="eyebrow">Selected identity</p><h3 id="dTitle">Front Office</h3><p id="dCopy">The first impression of hospitality: presence, communication, and confidence.</p></div></div>
+</section>
+
+<section class="section reveal"><div class="split"><div><p class="kicker">05 — Philosophy</p><h2>Grow through<br><em>each other.</em></h2></div><div class="copy"><p>FORSHA 7 brings two hospitality disciplines into one community. We value the different strengths that each role requires while keeping a common standard: show up, respect the process, and make the people around you better.</p><p>“Rise Together” is deliberately simple. It is a reminder that achievement is not only an individual score. It is what happens when a group chooses to keep moving, even when the path gets demanding.</p></div></div></section>
+
+<section class="section reveal"><div class="section-head"><p class="kicker">06 — Values</p><h2>What we<br><em>stand for.</em></h2></div><div class="values">
+<article class="value"><span>01</span><h3>Respect</h3><p>Good work starts with how we treat people.</p></article>
+<article class="value"><span>02</span><h3>Solidarity</h3><p>Pressure is easier to face when the team stays connected.</p></article>
+<article class="value"><span>03</span><h3>Discipline</h3><p>Consistency turns standards into habits.</p></article>
+<article class="value"><span>04</span><h3>Excellence</h3><p>Small details compound into a professional result.</p></article>
+<article class="value"><span>05</span><h3>Growth</h3><p>Every challenge can become a reason to improve.</p></article>
+</div></section>
+
+<section class="section tagline reveal"><p>Our motto</p><h2>Rise <span>Together.</span></h2></section>
+
+<section id="members" class="pagehero"><div><p class="eyebrow">07 — Our People</p><h1>One class.<br><span>Twenty names.</span></h1></div><div class="aside"><strong>CLASS COMMITTEE</strong><p>Four roles. One direction.</p></div></section>
+
+<section class="section reveal"><div class="section-head"><p class="kicker">08 — Committee</p><h2>Class<br><em>leadership.</em></h2></div><div class="people">
+<article class="person"><span class="idx">01</span><div><h3>I Made Sukra Mahardika</h3><p class="role">Korti</p></div><span class="num">01</span></article>
+<article class="person"><span class="idx">02</span><div><h3>Ni Putu Linda Purnama Dewi</h3><p class="role">Wakil</p></div><span class="num">02</span></article>
+<article class="person"><span class="idx">03</span><div><h3>I Putu Aditya Yuda Saputra</h3><p class="role">Bendahara</p></div><span class="num">03</span></article>
+<article class="person"><span class="idx">04</span><div><h3>Ni Luh Putu Novitasari</h3><p class="role">Sekretaris</p></div><span class="num">04</span></article>
+</div></section>
+
+<section class="section reveal"><div class="section-head"><p class="kicker">09 — Members</p><h2>The rest of<br><em>the class.</em></h2></div><div class="members">
+<div class="member"><span class="member-idx">05</span><strong>Ni Made Depi Yulia Lestari</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">06</span><strong>Ni Putu Cinta Lestari Dewi</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">07</span><strong>Ni Putu Nitadewi</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">08</span><strong>I Putu Yoga Aditya Pratama</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">09</span><strong>Ni Putu Bunga Mentari</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">10</span><strong>I Wayan Gede Surya Atmaja</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">11</span><strong>I Wayan Mahesa Putra</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">12</span><strong>I Made Yogi Tresna</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">13</span><strong>I Nyoman Doni Saputra</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">14</span><strong>I Nyoman Giong Arismawan</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">15</span><strong>I Putu Andika</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">16</span><strong>I Putu Andika Putra</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">17</span><strong>I Putu Pradita Wiguna</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">18</span><strong>I Putu Rispan Pratama</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">19</span><strong>Gusti Made Sujana Putra</strong><small class="status">Member</small></div>
+<div class="member"><span class="member-idx">20</span><strong>I Kadek Dwi Adnyana</strong><small class="status">Member</small></div>
+</div></section>
+</main>
+
+<footer><div><strong>FORSHA 7</strong> · Rise Together.</div><div>Bali Crystal College · 2026</div></footer>
+
+<script>
+(() => {
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = matchMedia("(pointer:fine)").matches;
+
+  const loader = document.getElementById("loader");
+  const hideLoader = () => loader?.classList.add("done");
+  addEventListener("load", () => setTimeout(hideLoader, 900), {once:true});
+  setTimeout(hideLoader, 2600);
+
+  const reveal = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduced) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    reveal.forEach(el => io.observe(el));
+  } else reveal.forEach(el => el.classList.add("visible"));
+
+  const hero7 = document.getElementById("hero7");
+  if (hero7 && fine && !reduced) {
+    let ticking = false;
+    addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        hero7.style.transform = `translate3d(0,${Math.min(scrollY*.08,50)}px,0)`;
+        ticking = false;
+      });
+    }, {passive:true});
+  }
+
+  const d = {
+    el: document.getElementById("detail"),
+    letter: document.getElementById("dLetter"),
+    title: document.getElementById("dTitle"),
+    copy: document.getElementById("dCopy")
+  };
+  let timer;
+  document.querySelectorAll(".acro").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".acro").forEach(x => x.classList.remove("active"));
+      btn.classList.add("active");
+      clearTimeout(timer);
+      d.el.style.opacity = "0";
+      timer = setTimeout(() => {
+        d.letter.textContent = btn.dataset.letter;
+        d.title.textContent = btn.dataset.title;
+        d.copy.textContent = btn.dataset.description;
+        d.el.style.opacity = "1";
+      }, 150);
+    });
+  });
+
+  const navs = [...document.querySelectorAll(".nav")];
+  const sections = ["home","about","members"].map(id => document.getElementById(id)).filter(Boolean);
+  const updateNav = () => {
+    const marker = scrollY + (document.querySelector("nav")?.offsetHeight || 0) + 40;
+    let current = sections[0]?.id;
+    for (const s of sections) if (marker >= s.offsetTop) current = s.id;
+    navs.forEach(n => n.classList.toggle("active", n.dataset.target === current));
+  };
+  addEventListener("scroll", updateNav, {passive:true});
+  addEventListener("resize", updateNav);
+  updateNav();
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (!target) return;
+      e.preventDefault();
+      const offset = (document.querySelector("nav")?.offsetHeight || 0) + 12;
+      const top = target.getBoundingClientRect().top + scrollY - offset;
+      scrollTo({top:Math.max(0,top), behavior:reduced ? "auto" : "smooth"});
+      history.replaceState(null,"",link.getAttribute("href"));
+    });
+  });
+
+  if (fine && !reduced) {
+    document.querySelectorAll(".magnetic").forEach(btn => {
+      btn.addEventListener("mousemove", e => {
+        const r = btn.getBoundingClientRect(), x=e.clientX-r.left-r.width/2, y=e.clientY-r.top-r.height/2;
+        btn.style.transform = `translate(${x*.08}px,${y*.08}px)`;
+      });
+      btn.addEventListener("mouseleave", () => btn.style.transform = "");
+    });
+  }
+
+  addEventListener("load", () => {
+    if (!location.hash) return;
+    const target = document.querySelector(location.hash);
+    if (!target) return;
+    setTimeout(() => {
+      const offset=(document.querySelector("nav")?.offsetHeight||0)+12;
+      scrollTo({top:Math.max(0,target.getBoundingClientRect().top+scrollY-offset),behavior:"auto"});
+    }, 80);
+  }, {once:true});
+})();
+</script>
+</body>
+</html>
